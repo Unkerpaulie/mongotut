@@ -1,9 +1,12 @@
 from colorama import Fore
 import program_guests as guests
 import program_hosts as hosts
+import data.mongo_setup as db_setup
 
 
 def main():
+    db_setup.global_init()
+
     print_header()
 
     try:
